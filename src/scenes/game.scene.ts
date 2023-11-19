@@ -1,24 +1,33 @@
 import Phaser from 'phaser';
 
+const LOAD_KEYS = {
+  MAZE_TILESET: "load_keys_maze_tiles",
+  MAZE_TILEMAP: "load_keys_maze_tilemap",
+}
+
+const TILED = {
+  TILESETS: {
+    MAZE: {
+      NAME: "maze_tiles",
+    }
+  }
+}
+
 export class GameScene extends Phaser.Scene {
   constructor() {
     super('GameScene');
   }
 
   preload() {
-    this.load.image('logo', 'assets/phaser3-logo.png');
+    this.load.image(LOAD_KEYS.MAZE_TILESET, 'assets/tileset/maze.png')
+    this.load.tilemapTiledJSON(LOAD_KEYS.MAZE_TILEMAP, 'assets/maze.json')
   }
 
   create() {
-    const logo = this.add.image(400, 70, 'logo');
+    const map = this.make.tilemap({ key: LOAD_KEYS.MAZE_TILEMAP })
 
-    this.tweens.add({
-      targets: logo,
-      y: 350,
-      duration: 1500,
-      ease: 'Sine.inOut',
-      yoyo: true,
-      repeat: -1
-    });
+    const tileset = map.addTilesetImage(TILED.TILESETS.MAZE.NAME, LOAD_KEYS.MAZE_TILESET)
+
+    map.createLayer("Maze", tileset!, 0, 0)
   }
 }

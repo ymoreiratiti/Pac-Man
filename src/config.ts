@@ -7,8 +7,8 @@ export const gameConfig: Phaser.Types.Core.GameConfig = {
   backgroundColor: '#33A5E7',
   scene: [GameScene],
   scale: {
-    width: 800,
-    height: 600,
+    width: 28 * 8,
+    height: 31 * 8,
     mode: Phaser.Scale.FIT,
     autoCenter: Phaser.Scale.CENTER_BOTH
   }
