@@ -1,5 +1,5 @@
-import Phaser from 'phaser';
-import { GameScene } from './scenes/game.scene';
+import Phaser from 'phaser'
+import { GameScene } from './scenes/game.scene'
 
 export const gameConfig: Phaser.Types.Core.GameConfig = {
   type: Phaser.AUTO,
@@ -10,12 +10,12 @@ export const gameConfig: Phaser.Types.Core.GameConfig = {
     width: 28 * 8,
     height: 31 * 8,
     mode: Phaser.Scale.FIT,
-    autoCenter: Phaser.Scale.CENTER_BOTH
+    autoCenter: Phaser.Scale.CENTER_BOTH,
   },
   physics: {
     default: 'arcade',
     arcade: {
-      debug: true
-    }
+      debug: true,
+    },
   },
-};
+}

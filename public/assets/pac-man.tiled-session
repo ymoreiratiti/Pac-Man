@@ -6,8 +6,8 @@
     "activeFile": "map/maze.tmx",
     "expandedProjectPaths": [
         "tileset",
-        ".",
-        "map"
+        "map",
+        "."
     ],
     "fileStates": {
         "": {
@@ -15,10 +15,10 @@
         },
         "map/maze.tmx": {
             "scale": 4,
-            "selectedLayer": 0,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 118.25,
-                "y": 106
+                "x": 117.75,
+                "y": 76.75
             }
         },
         "map/maze.tmx#maze": {
