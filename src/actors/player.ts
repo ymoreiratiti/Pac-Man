@@ -1,18 +1,17 @@
+import { FactoryProps } from "@excaliburjs/plugin-tiled";
 import { Actor, CollisionType, Color, Engine, Keys, Vector } from "excalibur";
 import { Config } from "../config";
-import { game } from "../game";
 
 export class Player extends Actor {
-  constructor() {
+  constructor(props: Partial<FactoryProps> = {}) {
     super({
-      x: 150,
-      y: game.drawHeight - 40,
+      x: props.worldPos?.x,
+      y: props.worldPos?.y,
       width: 8,
       height: 8,
       color: Color.Yellow,
+      collisionType: CollisionType.Active,
     });
-
-    this.body.collisionType = CollisionType.Fixed;
   }
 
   onPreUpdate(engine: Engine): void {

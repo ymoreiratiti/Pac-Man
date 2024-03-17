@@ -1,6 +1,7 @@
-import { Player } from "./actors/player";
 import { game } from "./game";
+import { loader } from "./loader";
+import { map001 } from "./resources/map-001";
 
-game.add(new Player());
-
-game.start();
+game.start(loader).then(() => {
+  map001.addToScene(game.currentScene);
+});

@@ -5,4 +5,6 @@ export const game = new Engine({
   height: 31 * 8,
   backgroundColor: Color.Black,
   displayMode: DisplayMode.FitScreen,
+  pixelArt: true,
+  pixelRatio: 10,
 });
