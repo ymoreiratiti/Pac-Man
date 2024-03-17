@@ -4,7 +4,8 @@
   "description": "Remake of the NES version for Pac-Man game",
   "scripts": {
     "start:dev": "parcel serve ./index.html",
-    "build": "parcel build ./index.html --dist-dir ./dist --public-url ./"
+    "build": "parcel build ./index.html --dist-dir ./dist --public-url ./",
+    "lint:fix": "eslint --fix ./src"
   },
   "author": "ymoreiratiti@gmail.com",
   "license": "MIT",
@@ -12,7 +13,11 @@
     "excalibur": "0.29.1"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-prettier": "^5.1.3",
     "parcel": "2.12.0",
-    "typescript": "5.4.2"
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.2"
   }
 }
