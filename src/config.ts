@@ -1,3 +1,4 @@
 export const Config = {
-  PlayerSpeed: 8 * 8, // pixels/sec
+  GridSize: 8,
+  PlayerSpeed: 64, // pixels/sec
 };

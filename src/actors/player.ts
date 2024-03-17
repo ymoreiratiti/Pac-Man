@@ -10,84 +10,124 @@ enum DIRECTION {
 }
 
 export class Player extends Actor {
-  private colisionWall: Record<DIRECTION, boolean> = {
-    [DIRECTION.UP]: false,
-    [DIRECTION.DOWN]: false,
-    [DIRECTION.LEFT]: false,
-    [DIRECTION.RIGHT]: false,
-  };
+  private queueDirection?: DIRECTION = DIRECTION.RIGHT;
 
-  constructor(props: Partial<FactoryProps> = {}) {
+  constructor(properties: Partial<FactoryProps> = {}) {
     super({
-      x: props.worldPos?.x,
-      y: props.worldPos?.y,
-      width: 8,
-      height: 8,
-      color: Color.Yellow,
       collisionType: CollisionType.Active,
+      color: Color.Yellow,
+      height: 8,
+      vel: new Vector(Config.PlayerSpeed, 0),
+      width: 8,
+      x: properties.worldPos?.x,
+      y: properties.worldPos?.y,
     });
   }
 
   onPreUpdate(engine: Engine): void {
-    this.updateCollisionWall();
-    this.changeDirection(engine);
+    this.handleMovement(engine);
   }
 
-  private updateCollisionWall() {
+  private handleMovement(engine: Engine) {
+    //  Queue movement
+    if (engine.input.keyboard.isHeld(Keys.ArrowRight) && !this.getTile(DIRECTION.RIGHT)!.solid) {
+      this.queueDirection = DIRECTION.RIGHT;
+    }
+
+    if (engine.input.keyboard.isHeld(Keys.ArrowLeft) && !this.getTile(DIRECTION.LEFT)!.solid) {
+      this.queueDirection = DIRECTION.LEFT;
+    }
+
+    if (engine.input.keyboard.isHeld(Keys.ArrowUp) && !this.getTile(DIRECTION.UP)!.solid) {
+      this.queueDirection = DIRECTION.UP;
+    }
+
+    if (engine.input.keyboard.isHeld(Keys.ArrowDown) && !this.getTile(DIRECTION.DOWN)!.solid) {
+      this.queueDirection = DIRECTION.DOWN;
+    }
+
+    //  Change direction
+    switch (this.queueDirection) {
+      case DIRECTION.RIGHT: {
+        if (this.canChangeDirection()) {
+          this.vel = new Vector(Config.PlayerSpeed, 0);
+          this.queueDirection = undefined;
+        }
+
+        break;
+      }
+
+      case DIRECTION.LEFT: {
+        if (this.canChangeDirection()) {
+          this.vel = new Vector(-Config.PlayerSpeed, 0);
+          this.queueDirection = undefined;
+        }
+
+        break;
+      }
+
+      case DIRECTION.UP: {
+        if (this.canChangeDirection()) {
+          this.vel = new Vector(0, -Config.PlayerSpeed);
+          this.queueDirection = undefined;
+        }
+
+        break;
+      }
+
+      case DIRECTION.DOWN: {
+        if (this.canChangeDirection()) {
+          this.vel = new Vector(0, Config.PlayerSpeed);
+          this.queueDirection = undefined;
+        }
+
+        break;
+      }
+    }
+  }
+  private canChangeDirection(): boolean {
+    if (!this.queueDirection) return false;
+    if (this.getTile(this.queueDirection)!.solid) return false;
+
+    const nextTilePos = this.getTile(this.queueDirection)!.pos;
+    const playerPosition = new Vector(Math.round(this.pos.x), Math.round(this.pos.y));
+    const halfGridSize = Config.GridSize / 2;
+
+    switch (this.queueDirection) {
+      case DIRECTION.RIGHT: {
+        return playerPosition.y - halfGridSize === nextTilePos!.y;
+      }
+
+      case DIRECTION.LEFT: {
+        return playerPosition.y - halfGridSize === nextTilePos!.y;
+      }
+
+      case DIRECTION.UP: {
+        return playerPosition.x - halfGridSize === nextTilePos!.x;
+      }
+
+      case DIRECTION.DOWN: {
+        return playerPosition.x - halfGridSize === nextTilePos!.x;
+      }
+    }
+  }
+
+  private getTile(direction: DIRECTION) {
     const tileMap = this.scene!.tileMaps[0];
-    const currentPos = new Vector(
-      Math.floor(this.pos.x),
-      Math.floor(this.pos.y),
-    );
 
-    const isInsideTileX =
-      (currentPos.x + tileMap.tileWidth / 2) % tileMap.tileWidth === 0;
-    const isInsideTileY =
-      (currentPos.y + tileMap.tileHeight / 2) % tileMap.tileWidth === 0;
-    if (!isInsideTileX || !isInsideTileY) return;
-
-    this.colisionWall = {
-      [DIRECTION.UP]: tileMap.getTileByPoint(
-        new Vector(currentPos.x, currentPos.y - tileMap.tileHeight),
-      )!.solid,
-      [DIRECTION.DOWN]: tileMap.getTileByPoint(
-        new Vector(currentPos.x, currentPos.y + tileMap.tileHeight),
-      )!.solid,
-      [DIRECTION.LEFT]: tileMap.getTileByPoint(
-        new Vector(currentPos.x - tileMap.tileWidth, currentPos.y),
-      )!.solid,
-      [DIRECTION.RIGHT]: tileMap.getTileByPoint(
-        new Vector(currentPos.x + tileMap.tileWidth, currentPos.y),
-      )!.solid,
-    };
-
-    console.log(this.colisionWall);
-  }
-
-  private changeDirection(engine: Engine) {
-    if (
-      engine.input.keyboard.isHeld(Keys.ArrowRight) &&
-      !this.colisionWall[DIRECTION.RIGHT]
-    ) {
-      this.vel = new Vector(Config.PlayerSpeed, 0);
-    }
-    if (
-      engine.input.keyboard.isHeld(Keys.ArrowLeft) &&
-      !this.colisionWall[DIRECTION.LEFT]
-    ) {
-      this.vel = new Vector(-Config.PlayerSpeed, 0);
-    }
-    if (
-      engine.input.keyboard.isHeld(Keys.ArrowUp) &&
-      !this.colisionWall[DIRECTION.UP]
-    ) {
-      this.vel = new Vector(0, -Config.PlayerSpeed);
-    }
-    if (
-      engine.input.keyboard.isHeld(Keys.ArrowDown) &&
-      !this.colisionWall[DIRECTION.DOWN]
-    ) {
-      this.vel = new Vector(0, Config.PlayerSpeed);
+    switch (direction) {
+      case DIRECTION.UP: {
+        return tileMap.getTileByPoint(new Vector(this.pos.x, this.pos.y - tileMap.tileHeight));
+      }
+      case DIRECTION.DOWN: {
+        return tileMap.getTileByPoint(new Vector(this.pos.x, this.pos.y + tileMap.tileHeight));
+      }
+      case DIRECTION.LEFT: {
+        return tileMap.getTileByPoint(new Vector(this.pos.x - tileMap.tileWidth, this.pos.y));
+      }
+      case DIRECTION.RIGHT: {
+        return tileMap.getTileByPoint(new Vector(this.pos.x + tileMap.tileWidth, this.pos.y));
+      }
     }
   }
 }

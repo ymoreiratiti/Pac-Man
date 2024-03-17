@@ -1,11 +1,12 @@
 module.exports = {
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaVersion": 2021
+  env: {
+    es2024: true,
   },
-  "extends": [
-    "plugin:@typescript-eslint/recommended",
-    "prettier",
-    "plugin:prettier/recommended"
-  ]
-}
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    ecmaVersion: "latest",
+    sourceType: "module",
+  },
+  extends: ["plugin:@typescript-eslint/recommended", "plugin:unicorn/all", "plugin:prettier/recommended"],
+  plugins: ["unicorn"],
+};

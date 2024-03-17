@@ -6,8 +6,8 @@ import { Player } from "../actors/player";
 
 export const map001Resource = new TiledResource(tmxPath, {
   entityClassNameFactories: {
-    player: (props) => {
-      return new Player(props);
+    player: (properties) => {
+      return new Player(properties);
     },
   },
   pathMap: [
