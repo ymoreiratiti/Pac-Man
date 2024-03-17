@@ -94,18 +94,12 @@ export class Player extends Actor {
     const halfGridSize = Config.GridSize / 2;
 
     switch (this.queueDirection) {
-      case DIRECTION.RIGHT: {
-        return playerPosition.y - halfGridSize === nextTilePos!.y;
-      }
-
+      case DIRECTION.RIGHT:
       case DIRECTION.LEFT: {
         return playerPosition.y - halfGridSize === nextTilePos!.y;
       }
 
-      case DIRECTION.UP: {
-        return playerPosition.x - halfGridSize === nextTilePos!.x;
-      }
-
+      case DIRECTION.UP:
       case DIRECTION.DOWN: {
         return playerPosition.x - halfGridSize === nextTilePos!.x;
       }

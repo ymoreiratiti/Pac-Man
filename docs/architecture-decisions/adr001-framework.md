@@ -7,7 +7,7 @@ description: Architecture Decision Record (ADR) for Excalibur Framework
 
 ## Context
 
-Várias rotinas dentro do código possuem comportamento padrão de outros jogos. Ex.: Movimentação dos personagens, colisão, controle, etc..
+Várias rotinas dentro do código possuem comportamento padrão de outros jogos. Ex.: Movimentação dos personagens, colisão, controle, calculos, etc..
 
 ## Decision
 
@@ -17,3 +17,4 @@ Utilizar o [Excalibur.js](https://excaliburjs.com/) como framerwork. Dessa forma
 
 - Menor complexidade no código
 - Desenvolvimento de forma mais ágil e precisa
+- Melhor Integraçãocom ferramentas como o Tiled
