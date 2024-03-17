@@ -25,11 +25,11 @@ export class Player extends Actor {
   }
 
   onPreUpdate(engine: Engine): void {
-    this.handleMovement(engine);
+    this.handleControl(engine);
+    this.handlePlayerDirection();
   }
 
-  private handleMovement(engine: Engine) {
-    //  Queue movement
+  private handleControl(engine: Engine) {
     if (engine.input.keyboard.isHeld(Keys.ArrowRight) && !this.getTile(DIRECTION.RIGHT)!.solid) {
       this.queueDirection = DIRECTION.RIGHT;
     }
@@ -45,65 +45,57 @@ export class Player extends Actor {
     if (engine.input.keyboard.isHeld(Keys.ArrowDown) && !this.getTile(DIRECTION.DOWN)!.solid) {
       this.queueDirection = DIRECTION.DOWN;
     }
-
-    //  Change direction
-    switch (this.queueDirection) {
-      case DIRECTION.RIGHT: {
-        if (this.canChangeDirection()) {
-          this.vel = new Vector(Config.PlayerSpeed, 0);
-          this.queueDirection = undefined;
-        }
-
-        break;
-      }
-
-      case DIRECTION.LEFT: {
-        if (this.canChangeDirection()) {
-          this.vel = new Vector(-Config.PlayerSpeed, 0);
-          this.queueDirection = undefined;
-        }
-
-        break;
-      }
-
-      case DIRECTION.UP: {
-        if (this.canChangeDirection()) {
-          this.vel = new Vector(0, -Config.PlayerSpeed);
-          this.queueDirection = undefined;
-        }
-
-        break;
-      }
-
-      case DIRECTION.DOWN: {
-        if (this.canChangeDirection()) {
-          this.vel = new Vector(0, Config.PlayerSpeed);
-          this.queueDirection = undefined;
-        }
-
-        break;
-      }
-    }
   }
-  private canChangeDirection(): boolean {
-    if (!this.queueDirection) return false;
-    if (this.getTile(this.queueDirection)!.solid) return false;
 
-    const nextTilePos = this.getTile(this.queueDirection)!.pos;
+  private handlePlayerDirection(): void {
+    if (!this.queueDirection) return;
+    if (this.getTile(this.queueDirection)!.solid) return;
+
+    //  Check if the player is in the middle of the tile
     const playerPosition = new Vector(Math.round(this.pos.x), Math.round(this.pos.y));
     const halfGridSize = Config.GridSize / 2;
+    const nextTilePos = this.getTile(this.queueDirection)!.pos;
 
+    let isInMiddleOfTile: boolean;
     switch (this.queueDirection) {
       case DIRECTION.RIGHT:
       case DIRECTION.LEFT: {
-        return playerPosition.y - halfGridSize === nextTilePos!.y;
+        isInMiddleOfTile = playerPosition.y - halfGridSize === nextTilePos!.y;
+        break;
       }
 
       case DIRECTION.UP:
       case DIRECTION.DOWN: {
-        return playerPosition.x - halfGridSize === nextTilePos!.x;
+        isInMiddleOfTile = playerPosition.x - halfGridSize === nextTilePos!.x;
+        break;
       }
     }
+
+    if (!isInMiddleOfTile) return;
+
+    switch (this.queueDirection!) {
+      case DIRECTION.RIGHT: {
+        this.vel = new Vector(Config.PlayerSpeed, 0);
+        break;
+      }
+
+      case DIRECTION.LEFT: {
+        this.vel = new Vector(-Config.PlayerSpeed, 0);
+        break;
+      }
+
+      case DIRECTION.UP: {
+        this.vel = new Vector(0, -Config.PlayerSpeed);
+        break;
+      }
+
+      case DIRECTION.DOWN: {
+        this.vel = new Vector(0, Config.PlayerSpeed);
+        break;
+      }
+    }
+
+    this.queueDirection = undefined;
   }
 
   private getTile(direction: DIRECTION) {
