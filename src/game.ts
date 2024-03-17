@@ -8,4 +8,5 @@ export const game = new Engine({
   displayMode: DisplayMode.FitScreen,
   pixelArt: true,
   pixelRatio: 10,
+  suppressPlayButton: true,
 });

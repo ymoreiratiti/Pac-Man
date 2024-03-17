@@ -1,5 +1,5 @@
 import { game } from "./game";
-import { loader } from "./loader";
+import { loader } from "./resources/loader";
 import { Map001Scene } from "./scenes/map-001";
 
 async function bootstrap() {

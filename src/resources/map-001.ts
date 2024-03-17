@@ -1,18 +1,14 @@
 import { TiledResource } from "@excaliburjs/plugin-tiled";
-import tmxPath from "../../assets/maps/map-001.tmx";
-import pngPath from "../../assets/tilesets/wall/wall.png";
-import tsxPath from "../../assets/tilesets/wall/wall.tsx";
 import { Player } from "../actors/player";
+import { pathMap } from "./file-path";
 
-export const map001Resource = new TiledResource(tmxPath, {
+export const map001Resource = new TiledResource(pathMap["map-001.tmx"], {
   entityClassNameFactories: {
-    player: (properties) => {
-      return new Player(properties);
-    },
+    player: (properties) => new Player(properties),
   },
   pathMap: [
-    { path: "map-001.tmx", output: tmxPath },
-    { path: "wall.png", output: pngPath },
-    { path: "wall.tsx", output: tsxPath },
+    { path: "map-001.tmx", output: pathMap["map-001.tmx"] },
+    { path: "wall.png", output: pathMap["wall.png"] },
+    { path: "wall.tsx", output: pathMap["wall.tsx"] },
   ],
 });

@@ -1,16 +1,12 @@
 import { FactoryProps } from "@excaliburjs/plugin-tiled";
-import { Actor, CollisionType, Color, Engine, Keys, Vector } from "excalibur";
+import { Actor, Animation, CollisionType, Color, Engine, Keys, Vector } from "excalibur";
+import { PlayerAnimation } from "../animations/player.animation";
 import { Config } from "../config";
-
-enum DIRECTION {
-  UP = "UP",
-  DOWN = "DOWN",
-  LEFT = "LEFT",
-  RIGHT = "RIGHT",
-}
+import { ANIMATION, DIRECTION } from "./types";
 
 export class Player extends Actor {
   private queueDirection?: DIRECTION = DIRECTION.RIGHT;
+  private walkingAnimation!: Animation;
 
   constructor(properties: Partial<FactoryProps> = {}) {
     super({
@@ -21,12 +17,31 @@ export class Player extends Actor {
       width: 8,
       x: properties.worldPos?.x,
       y: properties.worldPos?.y,
+      name: "player",
     });
   }
 
-  onPreUpdate(engine: Engine): void {
+  onInitialize(): void {
+    const playerAnimation = new PlayerAnimation();
+
+    this.walkingAnimation = playerAnimation.walking();
+
+    this.graphics.add(ANIMATION.WALKING, this.walkingAnimation);
+    this.graphics.use(ANIMATION.WALKING);
+  }
+
+  update(engine: Engine): void {
     this.handleControl(engine);
     this.handlePlayerDirection();
+    this.handleAnimation();
+  }
+
+  private handleAnimation() {
+    if (this.vel.x || this.vel.y) {
+      this.walkingAnimation.play();
+    } else {
+      this.walkingAnimation.pause();
+    }
   }
 
   private handleControl(engine: Engine) {
@@ -76,21 +91,25 @@ export class Player extends Actor {
     switch (this.queueDirection!) {
       case DIRECTION.RIGHT: {
         this.vel = new Vector(Config.PlayerSpeed, 0);
+        this.walkingAnimation.rotation = Math.PI * 0;
         break;
       }
 
       case DIRECTION.LEFT: {
         this.vel = new Vector(-Config.PlayerSpeed, 0);
+        this.walkingAnimation.rotation = Math.PI * 1;
         break;
       }
 
       case DIRECTION.UP: {
         this.vel = new Vector(0, -Config.PlayerSpeed);
+        this.walkingAnimation.rotation = Math.PI * 1.5;
         break;
       }
 
       case DIRECTION.DOWN: {
         this.vel = new Vector(0, Config.PlayerSpeed);
+        this.walkingAnimation.rotation = Math.PI * 0.5;
         break;
       }
     }
