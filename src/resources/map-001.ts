@@ -4,7 +4,7 @@ import pngPath from "../../assets/tilesets/wall/wall.png";
 import tsxPath from "../../assets/tilesets/wall/wall.tsx";
 import { Player } from "../actors/player";
 
-export const map001 = new TiledResource(tmxPath, {
+export const map001Resource = new TiledResource(tmxPath, {
   entityClassNameFactories: {
     player: (props) => {
       return new Player(props);

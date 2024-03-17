@@ -1,7 +1,9 @@
 import { game } from "./game";
 import { loader } from "./loader";
-import { map001 } from "./resources/map-001";
+import { Map001Scene } from "./scenes/map-001";
 
 game.start(loader).then(() => {
-  map001.addToScene(game.currentScene);
+  game.addScene(Map001Scene.name, new Map001Scene());
+
+  game.goToScene(Map001Scene.name);
 });
