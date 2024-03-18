@@ -3,15 +3,16 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "",
+    "activeFile": "maps/map-001.tmx",
+    "automapping.whileDrawing": true,
     "expandedProjectPaths": [
+        "tilesets/wall",
         "map",
         ".",
-        "tileset/wall",
-        "tilesets",
         "maps",
+        "tileset/wall",
         "tilesets/spritesheet",
-        "tilesets/wall"
+        "tilesets"
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
@@ -36,11 +37,11 @@
             }
         },
         "maps/map-001.tmx": {
-            "scale": 2.263911290322581,
+            "scale": 4,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 111.53263870335738,
-                "y": 189.49505744055568
+                "x": 89.75,
+                "y": 94.25
             }
         },
         "maps/tileset/maze-wall.tsx": {
@@ -65,6 +66,11 @@
             "scaleInDock": 1,
             "scaleInEditor": 3
         },
+        "tilesets/spritesheet/maze.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 4,
+            "scaleInEditor": 3
+        },
         "tilesets/spritesheet/spritesheet-16.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 3
@@ -75,7 +81,7 @@
         },
         "tilesets/wall/wall.tsx": {
             "dynamicWrapping": true,
-            "scaleInDock": 1,
+            "scaleInDock": 4,
             "scaleInEditor": 5.5
         }
     },
@@ -89,16 +95,18 @@
     "map.tileWidth": 8,
     "map.width": 28,
     "openFiles": [
+        "maps/map-001.tmx"
     ],
     "project": "main.tiled-project",
     "property.type": "bool",
     "recentFiles": [
+        "maps/map-001.tmx",
+        "tilesets/spritesheet/maze.tsx",
+        "tilesets/wall/wall.tsx",
         "tilesets/spritesheet/actors.tsx",
         "tilesets/spritesheet/spritesheet-16.tsx",
         "tilesets/spritesheet/spritesheet.tsx",
         "tilesets/spritesheet.tsx",
-        "maps/map-001.tmx",
-        "tilesets/wall/wall.tsx",
         "tileset/wall/wall.tsx",
         "map-001.tmx",
         "tileset/maze-wall.tsx",
@@ -106,8 +114,8 @@
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
-        "height": 16,
-        "width": 16
+        "height": 8,
+        "width": 8
     },
     "tileset.type": 0
 }
