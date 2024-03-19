@@ -6,13 +6,13 @@
     "activeFile": "maps/map-001.tmx",
     "automapping.whileDrawing": true,
     "expandedProjectPaths": [
-        "tilesets/wall",
-        "map",
         ".",
-        "maps",
-        "tileset/wall",
         "tilesets/spritesheet",
-        "tilesets"
+        "tilesets",
+        "tilesets/wall",
+        "maps",
+        "map",
+        "tileset/wall"
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
@@ -38,10 +38,10 @@
         },
         "maps/map-001.tmx": {
             "scale": 4,
-            "selectedLayer": 1,
+            "selectedLayer": 2,
             "viewCenter": {
-                "x": 89.75,
-                "y": 94.25
+                "x": 11.875,
+                "y": 35.75
             }
         },
         "maps/tileset/maze-wall.tsx": {
@@ -63,6 +63,7 @@
             "scaleInEditor": 1
         },
         "tilesets/spritesheet/actors.tsx": {
+            "dynamicWrapping": false,
             "scaleInDock": 1,
             "scaleInEditor": 3
         },
@@ -101,9 +102,9 @@
     "property.type": "bool",
     "recentFiles": [
         "maps/map-001.tmx",
+        "tilesets/spritesheet/actors.tsx",
         "tilesets/spritesheet/maze.tsx",
         "tilesets/wall/wall.tsx",
-        "tilesets/spritesheet/actors.tsx",
         "tilesets/spritesheet/spritesheet-16.tsx",
         "tilesets/spritesheet/spritesheet.tsx",
         "tilesets/spritesheet.tsx",
