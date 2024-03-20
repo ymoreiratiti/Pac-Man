@@ -17,7 +17,7 @@ export class Player extends Actor {
       width: 8,
       x: properties.worldPos?.x,
       y: properties.worldPos?.y,
-      name: "player",
+      name: Player.name,
     });
   }
 

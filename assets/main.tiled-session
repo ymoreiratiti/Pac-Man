@@ -38,10 +38,10 @@
         },
         "maps/map-001.tmx": {
             "scale": 4,
-            "selectedLayer": 2,
+            "selectedLayer": 3,
             "viewCenter": {
-                "x": 11.875,
-                "y": 35.75
+                "x": 135.5,
+                "y": 243.5
             }
         },
         "maps/tileset/maze-wall.tsx": {

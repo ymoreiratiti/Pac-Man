@@ -1,9 +1,9 @@
 import { FactoryProps } from "@excaliburjs/plugin-tiled";
-import { Actor, Circle, Collider, CollisionType, Color, ImageFiltering } from "excalibur";
+import { Actor, Collider, CollisionType, Color, ImageFiltering, Rectangle } from "excalibur";
 import { Config } from "../config";
 import { Player } from "./player";
 
-export class SpecialDot extends Actor {
+export class Dot extends Actor {
   constructor(public readonly properties: Partial<FactoryProps> = {}) {
     super({
       collisionType: CollisionType.Passive,
@@ -12,13 +12,14 @@ export class SpecialDot extends Actor {
       width: Config.GridSize,
       x: properties.worldPos!.x + Config.GridSize / 2,
       y: properties.worldPos!.y - Config.GridSize / 2,
-      name: SpecialDot.name,
+      name: Dot.name,
     });
 
     this.graphics.use(
-      new Circle({
+      new Rectangle({
         filtering: ImageFiltering.Pixel,
-        radius: Config.GridSize / 3,
+        width: Config.GridSize / 4,
+        height: Config.GridSize / 4,
         color: Color.fromHex("FFB7AE"),
       }),
     );

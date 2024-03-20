@@ -10,5 +10,3 @@ export const game = new Engine({
   pixelRatio: 10,
   suppressPlayButton: true,
 });
-
-game.toggleDebug();
