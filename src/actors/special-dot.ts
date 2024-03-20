@@ -9,8 +9,8 @@ export class SpecialDot extends Actor {
       color: Color.Yellow,
       height: Config.GridSize,
       width: Config.GridSize,
-      x: properties.worldPos?.x,
-      y: properties.worldPos?.y,
+      x: properties.worldPos!.x + Config.GridSize / 2,
+      y: properties.worldPos!.y - Config.GridSize / 2,
       name: "specialdot",
     });
 
