@@ -3,13 +3,13 @@ import pngSpriteSheetActors from "../../assets/tilesets/spritesheet/actors.png";
 import tsxSpriteSheetActors from "../../assets/tilesets/spritesheet/actors.tsx";
 import pngSpriteSheetMaze from "../../assets/tilesets/spritesheet/maze.png";
 import tsxSpriteSheetMaze from "../../assets/tilesets/spritesheet/maze.tsx";
-import pngWall from "../../assets/tilesets/wall/wall.png";
-import tsxWall from "../../assets/tilesets/wall/wall.tsx";
 
-export const pathMap = {
-  "map-001.tmx": tmxMap001,
-  "wall.png": pngWall,
-  "wall.tsx": tsxWall,
+export const filePath = {
+  maps: {
+    1: {
+      tmx: tmxMap001,
+    },
+  },
   spritesheet: {
     maze: {
       png: pngSpriteSheetMaze,
