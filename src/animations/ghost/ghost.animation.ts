@@ -47,8 +47,8 @@ export abstract class GhostAnimation {
       spriteSheet: this.actorSpriteSheet,
       strategy: AnimationStrategy.PingPong,
       frameCoordinates: [
-        { x: 5, y: this.spriteSheetCoordinatesY },
         { x: 6, y: this.spriteSheetCoordinatesY },
+        { x: 7, y: this.spriteSheetCoordinatesY },
       ],
     });
   }
