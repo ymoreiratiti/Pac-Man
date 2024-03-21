@@ -9,4 +9,7 @@ module.exports = {
   },
   extends: ["plugin:@typescript-eslint/recommended", "plugin:unicorn/all", "plugin:prettier/recommended"],
   plugins: ["unicorn"],
+  rules: {
+    "unicorn/prefer-event-target": "off",
+  },
 };

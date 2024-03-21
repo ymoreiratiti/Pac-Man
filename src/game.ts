@@ -6,7 +6,7 @@ import { Level1Scene } from "./scenes/level-001";
 export class Game extends Engine {
   constructor() {
     super({
-      width: 28 * Config.GridSize,
+      width: 35 * Config.GridSize,
       height: 31 * Config.GridSize,
       backgroundColor: Color.Black,
       displayMode: DisplayMode.FitScreen,
@@ -22,5 +22,6 @@ export class Game extends Engine {
     this.addScene(Level1Scene.name, new Level1Scene());
 
     this.goToScene(Level1Scene.name);
+    this.toggleDebug();
   }
 }

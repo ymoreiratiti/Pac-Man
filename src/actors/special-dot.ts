@@ -1,9 +1,18 @@
 import { FactoryProps } from "@excaliburjs/plugin-tiled";
-import { Actor, Circle, Collider, CollisionType, Color, ImageFiltering } from "excalibur";
+import { Actor, Circle, Collider, CollisionType, Color, EventEmitter, ImageFiltering } from "excalibur";
+import { ActorEvents } from "excalibur/build/dist/Actor";
 import { Config } from "../config";
 import { Player } from "./player";
 
+interface DotEvents {
+  eated: number;
+}
+
+const SCORE_POINT = 1000;
+
 export class SpecialDot extends Actor {
+  public events = new EventEmitter<ActorEvents & DotEvents>();
+
   constructor(public readonly properties: Partial<FactoryProps> = {}) {
     super({
       collisionType: CollisionType.Passive,
@@ -24,8 +33,10 @@ export class SpecialDot extends Actor {
     );
   }
 
-  onCollisionStart(self: Collider, other: Collider): void {
+  onCollisionStart(_self: Collider, other: Collider): void {
     if (other.owner.name !== Player.name) return;
+
+    this.events.emit("eated", SCORE_POINT);
     this.kill();
   }
 }
