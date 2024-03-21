@@ -101,8 +101,8 @@
     "project": "main.tiled-project",
     "property.type": "bool",
     "recentFiles": [
-        "maps/map-001.tmx",
         "tilesets/spritesheet/actors.tsx",
+        "maps/map-001.tmx",
         "tilesets/spritesheet/maze.tsx",
         "tilesets/wall/wall.tsx",
         "tilesets/spritesheet/spritesheet-16.tsx",

@@ -1,14 +1,23 @@
 import { TiledResource } from "@excaliburjs/plugin-tiled";
 import { Dot } from "../actors/dot";
+import { BlinkyActor } from "../actors/ghost/blinky.actor";
+import { ClydeActor } from "../actors/ghost/clyde.actor";
+import { InkyActor } from "../actors/ghost/inky.actor";
+import { PinkyActor } from "../actors/ghost/pinky.actor";
 import { Player } from "../actors/player";
 import { SpecialDot } from "../actors/special-dot";
 import { filePath } from "./file-path";
 
 export const map001Resource = new TiledResource(filePath.maps[1].tmx, {
   entityClassNameFactories: {
+    [BlinkyActor.name]: (properties) => new BlinkyActor(properties),
+    [ClydeActor.name]: (properties) => new ClydeActor(properties),
+    [PinkyActor.name]: (properties) => new PinkyActor(properties),
+    [InkyActor.name]: (properties) => new InkyActor(properties),
+
+    [Dot.name]: (properties) => new Dot(properties),
     [Player.name]: (properties) => new Player(properties),
     [SpecialDot.name]: (properties) => new SpecialDot(properties),
-    [Dot.name]: (properties) => new Dot(properties),
   },
   pathMap: [
     { path: "map-001.tmx", output: filePath.maps[1].tmx },
