@@ -7,7 +7,7 @@ import { BlinkyAnimation } from "./blinky.animation";
 export class BlinkyActor extends GhostActor {
   protected readonly animation = new BlinkyAnimation();
   protected queueDirection: Side = Side.Right;
-  protected currentState: GhostState = GhostState.CHASING;
+  protected currentState: GhostState = GhostState.SCATTER;
 
   constructor(properties: Partial<FactoryProps> = {}) {
     super(properties, { color: Color.Red, name: BlinkyActor.name });
@@ -17,18 +17,10 @@ export class BlinkyActor extends GhostActor {
    * UPDATE
    */
   protected handleControl(): void {
-    switch (this.currentState) {
-      case GhostState.CHASING: {
-        if (!this.inInsideTile) return;
-        this.handleAIChasing();
-        break;
-      }
+    if (this.currentState === GhostState.CHASING && this.inInsideTile) return this.handleAIChasing();
+    if (this.currentState === GhostState.SCATTER && this.inInsideTile) return this.handleAIScatter();
 
-      case GhostState.WAITING: {
-        this.handleAIWaiting();
-        break;
-      }
-    }
+    if (this.currentState === GhostState.WAITING) return this.handleAIWaiting();
   }
 
   protected handleAIChasing(): void {

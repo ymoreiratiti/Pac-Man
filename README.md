@@ -18,3 +18,4 @@ https://ymoreiratiti.github.io/Pac-Man/
 - [Understanding Pac-Man Ghost Behavior](https://gameinternals.com/understanding-pac-man-ghost-behavior)
 - [What Pac-Man Brought to Game Design | Design Icons](https://youtu.be/S4RHbnBkyh0?si=ji691_Fx8jraS5JX)
 - [Why do Pinky and Inky have different behaviors when Pac-Man is facing up?](http://donhodges.com/pacman_pinky_explanation.htm)
+- [Pac-Man Code](https://pacmancode.com/)

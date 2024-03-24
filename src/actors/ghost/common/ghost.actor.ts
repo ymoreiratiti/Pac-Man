@@ -14,6 +14,7 @@ export abstract class GhostActor extends PersonActor {
   protected speed = (Config.PlayerSpeed / 4) * 3; // 25% slower than player
   protected abstract readonly animation: GhostAnimation;
   private startPos: Vector;
+  protected scatterCorner: Vector;
 
   protected get playerActor(): PlayerActor {
     return this.scene.actors.find((actor) => actor.name === PlayerActor.name)! as PlayerActor;
@@ -28,6 +29,12 @@ export abstract class GhostActor extends PersonActor {
       pos: properties.worldPos,
       ...actorArguments,
     });
+
+    const ghostProperties = properties.properties as Map<string, string | number>;
+    this.scatterCorner = new Vector(
+      Number(ghostProperties.get("scatteredcornerx")),
+      Number(ghostProperties.get("scatteredcornery")),
+    );
 
     this.startPos = properties.worldPos!;
     this.setMovementDirection(this.queueDirection);
@@ -110,5 +117,9 @@ export abstract class GhostActor extends PersonActor {
     if (this.getTileOnSide(this.currentSide)!.solid) {
       this.setMovementDirection(Side.getOpposite(this.currentSide));
     }
+  }
+
+  protected handleAIScatter(): void {
+    this.queueDirection = this.findPath(this.scatterCorner);
   }
 }

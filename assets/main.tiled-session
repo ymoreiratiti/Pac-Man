@@ -99,7 +99,7 @@
         "maps/map-001.tmx"
     ],
     "project": "main.tiled-project",
-    "property.type": "bool",
+    "property.type": "int",
     "recentFiles": [
         "maps/map-001.tmx",
         "tilesets/spritesheet/actors.tsx",

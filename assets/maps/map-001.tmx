@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="28" height="36" tilewidth="8" tileheight="8" infinite="0" nextlayerid="8" nextobjectid="14">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="28" height="36" tilewidth="8" tileheight="8" infinite="0" nextlayerid="8" nextobjectid="16">
  <tileset firstgid="1" source="../tilesets/spritesheet/maze.tsx"/>
  <layer id="1" name="maze" width="28" height="36" locked="1">
   <properties>
@@ -298,7 +298,7 @@
   <object id="868" type="Dot" gid="30" x="208" y="272" width="8" height="8"/>
   <object id="869" type="Dot" gid="30" x="208" y="280" width="8" height="8"/>
  </objectgroup>
- <objectgroup id="2" name="StartPosition" locked="1">
+ <objectgroup id="2" name="StartPosition">
   <properties>
    <property name="excalibur" type="bool" value="true"/>
   </properties>
@@ -306,6 +306,10 @@
    <point/>
   </object>
   <object id="9" name="SPBlinky" type="BlinkyActor" x="112" y="134">
+   <properties>
+    <property name="ScatteredCornerX" type="int" value="210"/>
+    <property name="ScatteredCornerY" type="int" value="50"/>
+   </properties>
    <point/>
   </object>
   <object id="10" name="SPInky" type="InkyActor" x="96" y="160">
@@ -317,9 +321,7 @@
   <object id="12" name="SPClyde" type="ClydeActor" x="128" y="160">
    <point/>
   </object>
- </objectgroup>
- <objectgroup id="7" name="ScatteredPosition" locked="1">
-  <object id="13" name="SPBlinky" x="32" y="70">
+  <object id="14" x="210" y="50">
    <point/>
   </object>
  </objectgroup>
