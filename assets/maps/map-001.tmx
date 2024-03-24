@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="28" height="31" tilewidth="8" tileheight="8" infinite="0" nextlayerid="7" nextobjectid="13">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="28" height="36" tilewidth="8" tileheight="8" infinite="0" nextlayerid="8" nextobjectid="14">
  <tileset firstgid="1" source="../tilesets/spritesheet/maze.tsx"/>
- <layer id="1" name="maze " width="28" height="31" locked="1">
+ <layer id="1" name="maze" width="28" height="36" locked="1">
   <properties>
    <property name="solid" type="bool" value="true"/>
   </properties>
   <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 1,2,2,2,2,2,2,2,2,2,2,2,2,14,15,2,2,2,2,2,2,2,2,2,2,2,2,28,
 29,0,0,0,0,0,0,0,0,0,0,0,0,42,43,0,0,0,0,0,0,0,0,0,0,0,0,140,
 29,0,64,67,67,68,0,64,67,67,67,68,0,42,43,0,64,67,67,67,68,0,64,67,67,68,0,140,
@@ -40,276 +45,281 @@
 </data>
  </layer>
  <objectgroup id="5" name="SpecialDot" visible="0" locked="1">
-  <object id="5" type="SpecialDot" gid="86" x="208" y="192" width="8" height="8"/>
-  <object id="6" type="SpecialDot" gid="86" x="8" y="192" width="8" height="8"/>
-  <object id="7" type="SpecialDot" gid="86" x="208" y="32" width="8" height="8"/>
-  <object id="8" type="SpecialDot" gid="86" x="8" y="32" width="8" height="8"/>
+  <object id="5" type="SpecialDot" gid="86" x="208" y="232" width="8" height="8"/>
+  <object id="6" type="SpecialDot" gid="86" x="8" y="232" width="8" height="8"/>
+  <object id="7" type="SpecialDot" gid="86" x="208" y="72" width="8" height="8"/>
+  <object id="8" type="SpecialDot" gid="86" x="8" y="72" width="8" height="8"/>
  </objectgroup>
  <objectgroup id="6" name="Dot" visible="0" locked="1">
-  <object id="41" type="Dot" gid="30" x="8" y="16" width="8" height="8"/>
-  <object id="42" type="Dot" gid="30" x="8" y="24" width="8" height="8"/>
-  <object id="43" type="Dot" gid="30" x="8" y="32" width="8" height="8"/>
-  <object id="44" type="Dot" gid="30" x="8" y="40" width="8" height="8"/>
-  <object id="45" type="Dot" gid="30" x="8" y="48" width="8" height="8"/>
-  <object id="46" type="Dot" gid="30" x="8" y="56" width="8" height="8"/>
-  <object id="47" type="Dot" gid="30" x="8" y="64" width="8" height="8"/>
-  <object id="48" type="Dot" gid="30" x="8" y="72" width="8" height="8"/>
-  <object id="60" type="Dot" gid="30" x="8" y="168" width="8" height="8"/>
-  <object id="61" type="Dot" gid="30" x="8" y="176" width="8" height="8"/>
-  <object id="62" type="Dot" gid="30" x="8" y="184" width="8" height="8"/>
-  <object id="63" type="Dot" gid="30" x="8" y="192" width="8" height="8"/>
-  <object id="66" type="Dot" gid="30" x="8" y="216" width="8" height="8"/>
-  <object id="67" type="Dot" gid="30" x="8" y="224" width="8" height="8"/>
-  <object id="68" type="Dot" gid="30" x="8" y="232" width="8" height="8"/>
-  <object id="69" type="Dot" gid="30" x="8" y="240" width="8" height="8"/>
-  <object id="73" type="Dot" gid="30" x="16" y="16" width="8" height="8"/>
-  <object id="77" type="Dot" gid="30" x="16" y="48" width="8" height="8"/>
-  <object id="80" type="Dot" gid="30" x="16" y="72" width="8" height="8"/>
-  <object id="92" type="Dot" gid="30" x="16" y="168" width="8" height="8"/>
-  <object id="95" type="Dot" gid="30" x="16" y="192" width="8" height="8"/>
-  <object id="98" type="Dot" gid="30" x="16" y="216" width="8" height="8"/>
-  <object id="101" type="Dot" gid="30" x="16" y="240" width="8" height="8"/>
-  <object id="105" type="Dot" gid="30" x="24" y="16" width="8" height="8"/>
-  <object id="109" type="Dot" gid="30" x="24" y="48" width="8" height="8"/>
-  <object id="112" type="Dot" gid="30" x="24" y="72" width="8" height="8"/>
-  <object id="124" type="Dot" gid="30" x="24" y="168" width="8" height="8"/>
-  <object id="127" type="Dot" gid="30" x="24" y="192" width="8" height="8"/>
-  <object id="128" type="Dot" gid="30" x="24" y="200" width="8" height="8"/>
-  <object id="129" type="Dot" gid="30" x="24" y="208" width="8" height="8"/>
-  <object id="130" type="Dot" gid="30" x="24" y="216" width="8" height="8"/>
-  <object id="133" type="Dot" gid="30" x="24" y="240" width="8" height="8"/>
-  <object id="137" type="Dot" gid="30" x="32" y="16" width="8" height="8"/>
-  <object id="141" type="Dot" gid="30" x="32" y="48" width="8" height="8"/>
-  <object id="144" type="Dot" gid="30" x="32" y="72" width="8" height="8"/>
-  <object id="156" type="Dot" gid="30" x="32" y="168" width="8" height="8"/>
-  <object id="162" type="Dot" gid="30" x="32" y="216" width="8" height="8"/>
-  <object id="165" type="Dot" gid="30" x="32" y="240" width="8" height="8"/>
-  <object id="169" type="Dot" gid="30" x="40" y="16" width="8" height="8"/>
-  <object id="173" type="Dot" gid="30" x="40" y="48" width="8" height="8"/>
-  <object id="176" type="Dot" gid="30" x="40" y="72" width="8" height="8"/>
-  <object id="188" type="Dot" gid="30" x="40" y="168" width="8" height="8"/>
-  <object id="194" type="Dot" gid="30" x="40" y="216" width="8" height="8"/>
-  <object id="197" type="Dot" gid="30" x="40" y="240" width="8" height="8"/>
-  <object id="201" type="Dot" gid="30" x="48" y="16" width="8" height="8"/>
-  <object id="202" type="Dot" gid="30" x="48" y="24" width="8" height="8"/>
-  <object id="203" type="Dot" gid="30" x="48" y="32" width="8" height="8"/>
-  <object id="204" type="Dot" gid="30" x="48" y="40" width="8" height="8"/>
-  <object id="205" type="Dot" gid="30" x="48" y="48" width="8" height="8"/>
-  <object id="206" type="Dot" gid="30" x="48" y="56" width="8" height="8"/>
-  <object id="207" type="Dot" gid="30" x="48" y="64" width="8" height="8"/>
-  <object id="208" type="Dot" gid="30" x="48" y="72" width="8" height="8"/>
-  <object id="209" type="Dot" gid="30" x="48" y="80" width="8" height="8"/>
-  <object id="210" type="Dot" gid="30" x="48" y="88" width="8" height="8"/>
-  <object id="211" type="Dot" gid="30" x="48" y="96" width="8" height="8"/>
-  <object id="212" type="Dot" gid="30" x="48" y="104" width="8" height="8"/>
-  <object id="213" type="Dot" gid="30" x="48" y="112" width="8" height="8"/>
-  <object id="214" type="Dot" gid="30" x="48" y="120" width="8" height="8"/>
-  <object id="215" type="Dot" gid="30" x="48" y="128" width="8" height="8"/>
-  <object id="216" type="Dot" gid="30" x="48" y="136" width="8" height="8"/>
-  <object id="217" type="Dot" gid="30" x="48" y="144" width="8" height="8"/>
-  <object id="218" type="Dot" gid="30" x="48" y="152" width="8" height="8"/>
-  <object id="219" type="Dot" gid="30" x="48" y="160" width="8" height="8"/>
-  <object id="220" type="Dot" gid="30" x="48" y="168" width="8" height="8"/>
-  <object id="221" type="Dot" gid="30" x="48" y="176" width="8" height="8"/>
-  <object id="222" type="Dot" gid="30" x="48" y="184" width="8" height="8"/>
-  <object id="223" type="Dot" gid="30" x="48" y="192" width="8" height="8"/>
-  <object id="224" type="Dot" gid="30" x="48" y="200" width="8" height="8"/>
-  <object id="225" type="Dot" gid="30" x="48" y="208" width="8" height="8"/>
-  <object id="226" type="Dot" gid="30" x="48" y="216" width="8" height="8"/>
-  <object id="229" type="Dot" gid="30" x="48" y="240" width="8" height="8"/>
-  <object id="233" type="Dot" gid="30" x="56" y="16" width="8" height="8"/>
-  <object id="237" type="Dot" gid="30" x="56" y="48" width="8" height="8"/>
-  <object id="252" type="Dot" gid="30" x="56" y="168" width="8" height="8"/>
-  <object id="255" type="Dot" gid="30" x="56" y="192" width="8" height="8"/>
-  <object id="261" type="Dot" gid="30" x="56" y="240" width="8" height="8"/>
-  <object id="265" type="Dot" gid="30" x="64" y="16" width="8" height="8"/>
-  <object id="269" type="Dot" gid="30" x="64" y="48" width="8" height="8"/>
-  <object id="284" type="Dot" gid="30" x="64" y="168" width="8" height="8"/>
-  <object id="287" type="Dot" gid="30" x="64" y="192" width="8" height="8"/>
-  <object id="293" type="Dot" gid="30" x="64" y="240" width="8" height="8"/>
-  <object id="297" type="Dot" gid="30" x="72" y="16" width="8" height="8"/>
-  <object id="301" type="Dot" gid="30" x="72" y="48" width="8" height="8"/>
-  <object id="302" type="Dot" gid="30" x="72" y="56" width="8" height="8"/>
-  <object id="303" type="Dot" gid="30" x="72" y="64" width="8" height="8"/>
-  <object id="304" type="Dot" gid="30" x="72" y="72" width="8" height="8"/>
-  <object id="316" type="Dot" gid="30" x="72" y="168" width="8" height="8"/>
-  <object id="319" type="Dot" gid="30" x="72" y="192" width="8" height="8"/>
-  <object id="320" type="Dot" gid="30" x="72" y="200" width="8" height="8"/>
-  <object id="321" type="Dot" gid="30" x="72" y="208" width="8" height="8"/>
-  <object id="322" type="Dot" gid="30" x="72" y="216" width="8" height="8"/>
-  <object id="325" type="Dot" gid="30" x="72" y="240" width="8" height="8"/>
-  <object id="329" type="Dot" gid="30" x="80" y="16" width="8" height="8"/>
-  <object id="333" type="Dot" gid="30" x="80" y="48" width="8" height="8"/>
-  <object id="336" type="Dot" gid="30" x="80" y="72" width="8" height="8"/>
-  <object id="348" type="Dot" gid="30" x="80" y="168" width="8" height="8"/>
-  <object id="351" type="Dot" gid="30" x="80" y="192" width="8" height="8"/>
-  <object id="354" type="Dot" gid="30" x="80" y="216" width="8" height="8"/>
-  <object id="357" type="Dot" gid="30" x="80" y="240" width="8" height="8"/>
-  <object id="361" type="Dot" gid="30" x="88" y="16" width="8" height="8"/>
-  <object id="365" type="Dot" gid="30" x="88" y="48" width="8" height="8"/>
-  <object id="368" type="Dot" gid="30" x="88" y="72" width="8" height="8"/>
-  <object id="380" type="Dot" gid="30" x="88" y="168" width="8" height="8"/>
-  <object id="383" type="Dot" gid="30" x="88" y="192" width="8" height="8"/>
-  <object id="386" type="Dot" gid="30" x="88" y="216" width="8" height="8"/>
-  <object id="389" type="Dot" gid="30" x="88" y="240" width="8" height="8"/>
-  <object id="393" type="Dot" gid="30" x="96" y="16" width="8" height="8"/>
-  <object id="394" type="Dot" gid="30" x="96" y="24" width="8" height="8"/>
-  <object id="395" type="Dot" gid="30" x="96" y="32" width="8" height="8"/>
-  <object id="396" type="Dot" gid="30" x="96" y="40" width="8" height="8"/>
-  <object id="397" type="Dot" gid="30" x="96" y="48" width="8" height="8"/>
-  <object id="400" type="Dot" gid="30" x="96" y="72" width="8" height="8"/>
-  <object id="412" type="Dot" gid="30" x="96" y="168" width="8" height="8"/>
-  <object id="413" type="Dot" gid="30" x="96" y="176" width="8" height="8"/>
-  <object id="414" type="Dot" gid="30" x="96" y="184" width="8" height="8"/>
-  <object id="415" type="Dot" gid="30" x="96" y="192" width="8" height="8"/>
-  <object id="418" type="Dot" gid="30" x="96" y="216" width="8" height="8"/>
-  <object id="419" type="Dot" gid="30" x="96" y="224" width="8" height="8"/>
-  <object id="420" type="Dot" gid="30" x="96" y="232" width="8" height="8"/>
-  <object id="421" type="Dot" gid="30" x="96" y="240" width="8" height="8"/>
-  <object id="429" type="Dot" gid="30" x="104" y="48" width="8" height="8"/>
-  <object id="447" type="Dot" gid="30" x="104" y="192" width="8" height="8"/>
-  <object id="453" type="Dot" gid="30" x="104" y="240" width="8" height="8"/>
-  <object id="461" type="Dot" gid="30" x="112" y="48" width="8" height="8"/>
-  <object id="479" type="Dot" gid="30" x="112" y="192" width="8" height="8"/>
-  <object id="485" type="Dot" gid="30" x="112" y="240" width="8" height="8"/>
-  <object id="489" type="Dot" gid="30" x="120" y="16" width="8" height="8"/>
-  <object id="490" type="Dot" gid="30" x="120" y="24" width="8" height="8"/>
-  <object id="491" type="Dot" gid="30" x="120" y="32" width="8" height="8"/>
-  <object id="492" type="Dot" gid="30" x="120" y="40" width="8" height="8"/>
-  <object id="493" type="Dot" gid="30" x="120" y="48" width="8" height="8"/>
-  <object id="496" type="Dot" gid="30" x="120" y="72" width="8" height="8"/>
-  <object id="508" type="Dot" gid="30" x="120" y="168" width="8" height="8"/>
-  <object id="509" type="Dot" gid="30" x="120" y="176" width="8" height="8"/>
-  <object id="510" type="Dot" gid="30" x="120" y="184" width="8" height="8"/>
-  <object id="511" type="Dot" gid="30" x="120" y="192" width="8" height="8"/>
-  <object id="514" type="Dot" gid="30" x="120" y="216" width="8" height="8"/>
-  <object id="515" type="Dot" gid="30" x="120" y="224" width="8" height="8"/>
-  <object id="516" type="Dot" gid="30" x="120" y="232" width="8" height="8"/>
-  <object id="517" type="Dot" gid="30" x="120" y="240" width="8" height="8"/>
-  <object id="521" type="Dot" gid="30" x="128" y="16" width="8" height="8"/>
-  <object id="525" type="Dot" gid="30" x="128" y="48" width="8" height="8"/>
-  <object id="528" type="Dot" gid="30" x="128" y="72" width="8" height="8"/>
-  <object id="540" type="Dot" gid="30" x="128" y="168" width="8" height="8"/>
-  <object id="543" type="Dot" gid="30" x="128" y="192" width="8" height="8"/>
-  <object id="546" type="Dot" gid="30" x="128" y="216" width="8" height="8"/>
-  <object id="549" type="Dot" gid="30" x="128" y="240" width="8" height="8"/>
-  <object id="553" type="Dot" gid="30" x="136" y="16" width="8" height="8"/>
-  <object id="557" type="Dot" gid="30" x="136" y="48" width="8" height="8"/>
-  <object id="560" type="Dot" gid="30" x="136" y="72" width="8" height="8"/>
-  <object id="572" type="Dot" gid="30" x="136" y="168" width="8" height="8"/>
-  <object id="575" type="Dot" gid="30" x="136" y="192" width="8" height="8"/>
-  <object id="578" type="Dot" gid="30" x="136" y="216" width="8" height="8"/>
-  <object id="581" type="Dot" gid="30" x="136" y="240" width="8" height="8"/>
-  <object id="585" type="Dot" gid="30" x="144" y="16" width="8" height="8"/>
-  <object id="589" type="Dot" gid="30" x="144" y="48" width="8" height="8"/>
-  <object id="590" type="Dot" gid="30" x="144" y="56" width="8" height="8"/>
-  <object id="591" type="Dot" gid="30" x="144" y="64" width="8" height="8"/>
-  <object id="592" type="Dot" gid="30" x="144" y="72" width="8" height="8"/>
-  <object id="604" type="Dot" gid="30" x="144" y="168" width="8" height="8"/>
-  <object id="607" type="Dot" gid="30" x="144" y="192" width="8" height="8"/>
-  <object id="608" type="Dot" gid="30" x="144" y="200" width="8" height="8"/>
-  <object id="609" type="Dot" gid="30" x="144" y="208" width="8" height="8"/>
-  <object id="610" type="Dot" gid="30" x="144" y="216" width="8" height="8"/>
-  <object id="613" type="Dot" gid="30" x="144" y="240" width="8" height="8"/>
-  <object id="617" type="Dot" gid="30" x="152" y="16" width="8" height="8"/>
-  <object id="621" type="Dot" gid="30" x="152" y="48" width="8" height="8"/>
-  <object id="636" type="Dot" gid="30" x="152" y="168" width="8" height="8"/>
-  <object id="639" type="Dot" gid="30" x="152" y="192" width="8" height="8"/>
-  <object id="645" type="Dot" gid="30" x="152" y="240" width="8" height="8"/>
-  <object id="649" type="Dot" gid="30" x="160" y="16" width="8" height="8"/>
-  <object id="653" type="Dot" gid="30" x="160" y="48" width="8" height="8"/>
-  <object id="668" type="Dot" gid="30" x="160" y="168" width="8" height="8"/>
-  <object id="671" type="Dot" gid="30" x="160" y="192" width="8" height="8"/>
-  <object id="677" type="Dot" gid="30" x="160" y="240" width="8" height="8"/>
-  <object id="681" type="Dot" gid="30" x="168" y="16" width="8" height="8"/>
-  <object id="682" type="Dot" gid="30" x="168" y="24" width="8" height="8"/>
-  <object id="683" type="Dot" gid="30" x="168" y="32" width="8" height="8"/>
-  <object id="684" type="Dot" gid="30" x="168" y="40" width="8" height="8"/>
-  <object id="685" type="Dot" gid="30" x="168" y="48" width="8" height="8"/>
-  <object id="686" type="Dot" gid="30" x="168" y="56" width="8" height="8"/>
-  <object id="687" type="Dot" gid="30" x="168" y="64" width="8" height="8"/>
-  <object id="688" type="Dot" gid="30" x="168" y="72" width="8" height="8"/>
-  <object id="689" type="Dot" gid="30" x="168" y="80" width="8" height="8"/>
-  <object id="690" type="Dot" gid="30" x="168" y="88" width="8" height="8"/>
-  <object id="691" type="Dot" gid="30" x="168" y="96" width="8" height="8"/>
-  <object id="692" type="Dot" gid="30" x="168" y="104" width="8" height="8"/>
-  <object id="693" type="Dot" gid="30" x="168" y="112" width="8" height="8"/>
-  <object id="694" type="Dot" gid="30" x="168" y="120" width="8" height="8"/>
-  <object id="695" type="Dot" gid="30" x="168" y="128" width="8" height="8"/>
-  <object id="696" type="Dot" gid="30" x="168" y="136" width="8" height="8"/>
-  <object id="697" type="Dot" gid="30" x="168" y="144" width="8" height="8"/>
-  <object id="698" type="Dot" gid="30" x="168" y="152" width="8" height="8"/>
-  <object id="699" type="Dot" gid="30" x="168" y="160" width="8" height="8"/>
-  <object id="700" type="Dot" gid="30" x="168" y="168" width="8" height="8"/>
-  <object id="701" type="Dot" gid="30" x="168" y="176" width="8" height="8"/>
-  <object id="702" type="Dot" gid="30" x="168" y="184" width="8" height="8"/>
-  <object id="703" type="Dot" gid="30" x="168" y="192" width="8" height="8"/>
-  <object id="704" type="Dot" gid="30" x="168" y="200" width="8" height="8"/>
-  <object id="705" type="Dot" gid="30" x="168" y="208" width="8" height="8"/>
-  <object id="706" type="Dot" gid="30" x="168" y="216" width="8" height="8"/>
-  <object id="709" type="Dot" gid="30" x="168" y="240" width="8" height="8"/>
-  <object id="713" type="Dot" gid="30" x="176" y="16" width="8" height="8"/>
-  <object id="717" type="Dot" gid="30" x="176" y="48" width="8" height="8"/>
-  <object id="720" type="Dot" gid="30" x="176" y="72" width="8" height="8"/>
-  <object id="732" type="Dot" gid="30" x="176" y="168" width="8" height="8"/>
-  <object id="738" type="Dot" gid="30" x="176" y="216" width="8" height="8"/>
-  <object id="741" type="Dot" gid="30" x="176" y="240" width="8" height="8"/>
-  <object id="745" type="Dot" gid="30" x="184" y="16" width="8" height="8"/>
-  <object id="749" type="Dot" gid="30" x="184" y="48" width="8" height="8"/>
-  <object id="752" type="Dot" gid="30" x="184" y="72" width="8" height="8"/>
-  <object id="764" type="Dot" gid="30" x="184" y="168" width="8" height="8"/>
-  <object id="770" type="Dot" gid="30" x="184" y="216" width="8" height="8"/>
-  <object id="773" type="Dot" gid="30" x="184" y="240" width="8" height="8"/>
-  <object id="777" type="Dot" gid="30" x="192" y="16" width="8" height="8"/>
-  <object id="781" type="Dot" gid="30" x="192" y="48" width="8" height="8"/>
-  <object id="784" type="Dot" gid="30" x="192" y="72" width="8" height="8"/>
-  <object id="796" type="Dot" gid="30" x="192" y="168" width="8" height="8"/>
-  <object id="799" type="Dot" gid="30" x="192" y="192" width="8" height="8"/>
-  <object id="800" type="Dot" gid="30" x="192" y="200" width="8" height="8"/>
-  <object id="801" type="Dot" gid="30" x="192" y="208" width="8" height="8"/>
-  <object id="802" type="Dot" gid="30" x="192" y="216" width="8" height="8"/>
-  <object id="805" type="Dot" gid="30" x="192" y="240" width="8" height="8"/>
-  <object id="809" type="Dot" gid="30" x="200" y="16" width="8" height="8"/>
-  <object id="813" type="Dot" gid="30" x="200" y="48" width="8" height="8"/>
-  <object id="816" type="Dot" gid="30" x="200" y="72" width="8" height="8"/>
-  <object id="828" type="Dot" gid="30" x="200" y="168" width="8" height="8"/>
-  <object id="831" type="Dot" gid="30" x="200" y="192" width="8" height="8"/>
-  <object id="834" type="Dot" gid="30" x="200" y="216" width="8" height="8"/>
-  <object id="837" type="Dot" gid="30" x="200" y="240" width="8" height="8"/>
-  <object id="841" type="Dot" gid="30" x="208" y="16" width="8" height="8"/>
-  <object id="842" type="Dot" gid="30" x="208" y="24" width="8" height="8"/>
-  <object id="843" type="Dot" gid="30" x="208" y="32" width="8" height="8"/>
-  <object id="844" type="Dot" gid="30" x="208" y="40" width="8" height="8"/>
-  <object id="845" type="Dot" gid="30" x="208" y="48" width="8" height="8"/>
-  <object id="846" type="Dot" gid="30" x="208" y="56" width="8" height="8"/>
-  <object id="847" type="Dot" gid="30" x="208" y="64" width="8" height="8"/>
-  <object id="848" type="Dot" gid="30" x="208" y="72" width="8" height="8"/>
-  <object id="860" type="Dot" gid="30" x="208" y="168" width="8" height="8"/>
-  <object id="861" type="Dot" gid="30" x="208" y="176" width="8" height="8"/>
-  <object id="862" type="Dot" gid="30" x="208" y="184" width="8" height="8"/>
-  <object id="863" type="Dot" gid="30" x="208" y="192" width="8" height="8"/>
-  <object id="866" type="Dot" gid="30" x="208" y="216" width="8" height="8"/>
-  <object id="867" type="Dot" gid="30" x="208" y="224" width="8" height="8"/>
-  <object id="868" type="Dot" gid="30" x="208" y="232" width="8" height="8"/>
-  <object id="869" type="Dot" gid="30" x="208" y="240" width="8" height="8"/>
+  <object id="41" type="Dot" gid="30" x="8" y="56" width="8" height="8"/>
+  <object id="42" type="Dot" gid="30" x="8" y="64" width="8" height="8"/>
+  <object id="43" type="Dot" gid="30" x="8" y="72" width="8" height="8"/>
+  <object id="44" type="Dot" gid="30" x="8" y="80" width="8" height="8"/>
+  <object id="45" type="Dot" gid="30" x="8" y="88" width="8" height="8"/>
+  <object id="46" type="Dot" gid="30" x="8" y="96" width="8" height="8"/>
+  <object id="47" type="Dot" gid="30" x="8" y="104" width="8" height="8"/>
+  <object id="48" type="Dot" gid="30" x="8" y="112" width="8" height="8"/>
+  <object id="60" type="Dot" gid="30" x="8" y="208" width="8" height="8"/>
+  <object id="61" type="Dot" gid="30" x="8" y="216" width="8" height="8"/>
+  <object id="62" type="Dot" gid="30" x="8" y="224" width="8" height="8"/>
+  <object id="63" type="Dot" gid="30" x="8" y="232" width="8" height="8"/>
+  <object id="66" type="Dot" gid="30" x="8" y="256" width="8" height="8"/>
+  <object id="67" type="Dot" gid="30" x="8" y="264" width="8" height="8"/>
+  <object id="68" type="Dot" gid="30" x="8" y="272" width="8" height="8"/>
+  <object id="69" type="Dot" gid="30" x="8" y="280" width="8" height="8"/>
+  <object id="73" type="Dot" gid="30" x="16" y="56" width="8" height="8"/>
+  <object id="77" type="Dot" gid="30" x="16" y="88" width="8" height="8"/>
+  <object id="80" type="Dot" gid="30" x="16" y="112" width="8" height="8"/>
+  <object id="92" type="Dot" gid="30" x="16" y="208" width="8" height="8"/>
+  <object id="95" type="Dot" gid="30" x="16" y="232" width="8" height="8"/>
+  <object id="98" type="Dot" gid="30" x="16" y="256" width="8" height="8"/>
+  <object id="101" type="Dot" gid="30" x="16" y="280" width="8" height="8"/>
+  <object id="105" type="Dot" gid="30" x="24" y="56" width="8" height="8"/>
+  <object id="109" type="Dot" gid="30" x="24" y="88" width="8" height="8"/>
+  <object id="112" type="Dot" gid="30" x="24" y="112" width="8" height="8"/>
+  <object id="124" type="Dot" gid="30" x="24" y="208" width="8" height="8"/>
+  <object id="127" type="Dot" gid="30" x="24" y="232" width="8" height="8"/>
+  <object id="128" type="Dot" gid="30" x="24" y="240" width="8" height="8"/>
+  <object id="129" type="Dot" gid="30" x="24" y="248" width="8" height="8"/>
+  <object id="130" type="Dot" gid="30" x="24" y="256" width="8" height="8"/>
+  <object id="133" type="Dot" gid="30" x="24" y="280" width="8" height="8"/>
+  <object id="137" type="Dot" gid="30" x="32" y="56" width="8" height="8"/>
+  <object id="141" type="Dot" gid="30" x="32" y="88" width="8" height="8"/>
+  <object id="144" type="Dot" gid="30" x="32" y="112" width="8" height="8"/>
+  <object id="156" type="Dot" gid="30" x="32" y="208" width="8" height="8"/>
+  <object id="162" type="Dot" gid="30" x="32" y="256" width="8" height="8"/>
+  <object id="165" type="Dot" gid="30" x="32" y="280" width="8" height="8"/>
+  <object id="169" type="Dot" gid="30" x="40" y="56" width="8" height="8"/>
+  <object id="173" type="Dot" gid="30" x="40" y="88" width="8" height="8"/>
+  <object id="176" type="Dot" gid="30" x="40" y="112" width="8" height="8"/>
+  <object id="188" type="Dot" gid="30" x="40" y="208" width="8" height="8"/>
+  <object id="194" type="Dot" gid="30" x="40" y="256" width="8" height="8"/>
+  <object id="197" type="Dot" gid="30" x="40" y="280" width="8" height="8"/>
+  <object id="201" type="Dot" gid="30" x="48" y="56" width="8" height="8"/>
+  <object id="202" type="Dot" gid="30" x="48" y="64" width="8" height="8"/>
+  <object id="203" type="Dot" gid="30" x="48" y="72" width="8" height="8"/>
+  <object id="204" type="Dot" gid="30" x="48" y="80" width="8" height="8"/>
+  <object id="205" type="Dot" gid="30" x="48" y="88" width="8" height="8"/>
+  <object id="206" type="Dot" gid="30" x="48" y="96" width="8" height="8"/>
+  <object id="207" type="Dot" gid="30" x="48" y="104" width="8" height="8"/>
+  <object id="208" type="Dot" gid="30" x="48" y="112" width="8" height="8"/>
+  <object id="209" type="Dot" gid="30" x="48" y="120" width="8" height="8"/>
+  <object id="210" type="Dot" gid="30" x="48" y="128" width="8" height="8"/>
+  <object id="211" type="Dot" gid="30" x="48" y="136" width="8" height="8"/>
+  <object id="212" type="Dot" gid="30" x="48" y="144" width="8" height="8"/>
+  <object id="213" type="Dot" gid="30" x="48" y="152" width="8" height="8"/>
+  <object id="214" type="Dot" gid="30" x="48" y="160" width="8" height="8"/>
+  <object id="215" type="Dot" gid="30" x="48" y="168" width="8" height="8"/>
+  <object id="216" type="Dot" gid="30" x="48" y="176" width="8" height="8"/>
+  <object id="217" type="Dot" gid="30" x="48" y="184" width="8" height="8"/>
+  <object id="218" type="Dot" gid="30" x="48" y="192" width="8" height="8"/>
+  <object id="219" type="Dot" gid="30" x="48" y="200" width="8" height="8"/>
+  <object id="220" type="Dot" gid="30" x="48" y="208" width="8" height="8"/>
+  <object id="221" type="Dot" gid="30" x="48" y="216" width="8" height="8"/>
+  <object id="222" type="Dot" gid="30" x="48" y="224" width="8" height="8"/>
+  <object id="223" type="Dot" gid="30" x="48" y="232" width="8" height="8"/>
+  <object id="224" type="Dot" gid="30" x="48" y="240" width="8" height="8"/>
+  <object id="225" type="Dot" gid="30" x="48" y="248" width="8" height="8"/>
+  <object id="226" type="Dot" gid="30" x="48" y="256" width="8" height="8"/>
+  <object id="229" type="Dot" gid="30" x="48" y="280" width="8" height="8"/>
+  <object id="233" type="Dot" gid="30" x="56" y="56" width="8" height="8"/>
+  <object id="237" type="Dot" gid="30" x="56" y="88" width="8" height="8"/>
+  <object id="252" type="Dot" gid="30" x="56" y="208" width="8" height="8"/>
+  <object id="255" type="Dot" gid="30" x="56" y="232" width="8" height="8"/>
+  <object id="261" type="Dot" gid="30" x="56" y="280" width="8" height="8"/>
+  <object id="265" type="Dot" gid="30" x="64" y="56" width="8" height="8"/>
+  <object id="269" type="Dot" gid="30" x="64" y="88" width="8" height="8"/>
+  <object id="284" type="Dot" gid="30" x="64" y="208" width="8" height="8"/>
+  <object id="287" type="Dot" gid="30" x="64" y="232" width="8" height="8"/>
+  <object id="293" type="Dot" gid="30" x="64" y="280" width="8" height="8"/>
+  <object id="297" type="Dot" gid="30" x="72" y="56" width="8" height="8"/>
+  <object id="301" type="Dot" gid="30" x="72" y="88" width="8" height="8"/>
+  <object id="302" type="Dot" gid="30" x="72" y="96" width="8" height="8"/>
+  <object id="303" type="Dot" gid="30" x="72" y="104" width="8" height="8"/>
+  <object id="304" type="Dot" gid="30" x="72" y="112" width="8" height="8"/>
+  <object id="316" type="Dot" gid="30" x="72" y="208" width="8" height="8"/>
+  <object id="319" type="Dot" gid="30" x="72" y="232" width="8" height="8"/>
+  <object id="320" type="Dot" gid="30" x="72" y="240" width="8" height="8"/>
+  <object id="321" type="Dot" gid="30" x="72" y="248" width="8" height="8"/>
+  <object id="322" type="Dot" gid="30" x="72" y="256" width="8" height="8"/>
+  <object id="325" type="Dot" gid="30" x="72" y="280" width="8" height="8"/>
+  <object id="329" type="Dot" gid="30" x="80" y="56" width="8" height="8"/>
+  <object id="333" type="Dot" gid="30" x="80" y="88" width="8" height="8"/>
+  <object id="336" type="Dot" gid="30" x="80" y="112" width="8" height="8"/>
+  <object id="348" type="Dot" gid="30" x="80" y="208" width="8" height="8"/>
+  <object id="351" type="Dot" gid="30" x="80" y="232" width="8" height="8"/>
+  <object id="354" type="Dot" gid="30" x="80" y="256" width="8" height="8"/>
+  <object id="357" type="Dot" gid="30" x="80" y="280" width="8" height="8"/>
+  <object id="361" type="Dot" gid="30" x="88" y="56" width="8" height="8"/>
+  <object id="365" type="Dot" gid="30" x="88" y="88" width="8" height="8"/>
+  <object id="368" type="Dot" gid="30" x="88" y="112" width="8" height="8"/>
+  <object id="380" type="Dot" gid="30" x="88" y="208" width="8" height="8"/>
+  <object id="383" type="Dot" gid="30" x="88" y="232" width="8" height="8"/>
+  <object id="386" type="Dot" gid="30" x="88" y="256" width="8" height="8"/>
+  <object id="389" type="Dot" gid="30" x="88" y="280" width="8" height="8"/>
+  <object id="393" type="Dot" gid="30" x="96" y="56" width="8" height="8"/>
+  <object id="394" type="Dot" gid="30" x="96" y="64" width="8" height="8"/>
+  <object id="395" type="Dot" gid="30" x="96" y="72" width="8" height="8"/>
+  <object id="396" type="Dot" gid="30" x="96" y="80" width="8" height="8"/>
+  <object id="397" type="Dot" gid="30" x="96" y="88" width="8" height="8"/>
+  <object id="400" type="Dot" gid="30" x="96" y="112" width="8" height="8"/>
+  <object id="412" type="Dot" gid="30" x="96" y="208" width="8" height="8"/>
+  <object id="413" type="Dot" gid="30" x="96" y="216" width="8" height="8"/>
+  <object id="414" type="Dot" gid="30" x="96" y="224" width="8" height="8"/>
+  <object id="415" type="Dot" gid="30" x="96" y="232" width="8" height="8"/>
+  <object id="418" type="Dot" gid="30" x="96" y="256" width="8" height="8"/>
+  <object id="419" type="Dot" gid="30" x="96" y="264" width="8" height="8"/>
+  <object id="420" type="Dot" gid="30" x="96" y="272" width="8" height="8"/>
+  <object id="421" type="Dot" gid="30" x="96" y="280" width="8" height="8"/>
+  <object id="429" type="Dot" gid="30" x="104" y="88" width="8" height="8"/>
+  <object id="447" type="Dot" gid="30" x="104" y="232" width="8" height="8"/>
+  <object id="453" type="Dot" gid="30" x="104" y="280" width="8" height="8"/>
+  <object id="461" type="Dot" gid="30" x="112" y="88" width="8" height="8"/>
+  <object id="479" type="Dot" gid="30" x="112" y="232" width="8" height="8"/>
+  <object id="485" type="Dot" gid="30" x="112" y="280" width="8" height="8"/>
+  <object id="489" type="Dot" gid="30" x="120" y="56" width="8" height="8"/>
+  <object id="490" type="Dot" gid="30" x="120" y="64" width="8" height="8"/>
+  <object id="491" type="Dot" gid="30" x="120" y="72" width="8" height="8"/>
+  <object id="492" type="Dot" gid="30" x="120" y="80" width="8" height="8"/>
+  <object id="493" type="Dot" gid="30" x="120" y="88" width="8" height="8"/>
+  <object id="496" type="Dot" gid="30" x="120" y="112" width="8" height="8"/>
+  <object id="508" type="Dot" gid="30" x="120" y="208" width="8" height="8"/>
+  <object id="509" type="Dot" gid="30" x="120" y="216" width="8" height="8"/>
+  <object id="510" type="Dot" gid="30" x="120" y="224" width="8" height="8"/>
+  <object id="511" type="Dot" gid="30" x="120" y="232" width="8" height="8"/>
+  <object id="514" type="Dot" gid="30" x="120" y="256" width="8" height="8"/>
+  <object id="515" type="Dot" gid="30" x="120" y="264" width="8" height="8"/>
+  <object id="516" type="Dot" gid="30" x="120" y="272" width="8" height="8"/>
+  <object id="517" type="Dot" gid="30" x="120" y="280" width="8" height="8"/>
+  <object id="521" type="Dot" gid="30" x="128" y="56" width="8" height="8"/>
+  <object id="525" type="Dot" gid="30" x="128" y="88" width="8" height="8"/>
+  <object id="528" type="Dot" gid="30" x="128" y="112" width="8" height="8"/>
+  <object id="540" type="Dot" gid="30" x="128" y="208" width="8" height="8"/>
+  <object id="543" type="Dot" gid="30" x="128" y="232" width="8" height="8"/>
+  <object id="546" type="Dot" gid="30" x="128" y="256" width="8" height="8"/>
+  <object id="549" type="Dot" gid="30" x="128" y="280" width="8" height="8"/>
+  <object id="553" type="Dot" gid="30" x="136" y="56" width="8" height="8"/>
+  <object id="557" type="Dot" gid="30" x="136" y="88" width="8" height="8"/>
+  <object id="560" type="Dot" gid="30" x="136" y="112" width="8" height="8"/>
+  <object id="572" type="Dot" gid="30" x="136" y="208" width="8" height="8"/>
+  <object id="575" type="Dot" gid="30" x="136" y="232" width="8" height="8"/>
+  <object id="578" type="Dot" gid="30" x="136" y="256" width="8" height="8"/>
+  <object id="581" type="Dot" gid="30" x="136" y="280" width="8" height="8"/>
+  <object id="585" type="Dot" gid="30" x="144" y="56" width="8" height="8"/>
+  <object id="589" type="Dot" gid="30" x="144" y="88" width="8" height="8"/>
+  <object id="590" type="Dot" gid="30" x="144" y="96" width="8" height="8"/>
+  <object id="591" type="Dot" gid="30" x="144" y="104" width="8" height="8"/>
+  <object id="592" type="Dot" gid="30" x="144" y="112" width="8" height="8"/>
+  <object id="604" type="Dot" gid="30" x="144" y="208" width="8" height="8"/>
+  <object id="607" type="Dot" gid="30" x="144" y="232" width="8" height="8"/>
+  <object id="608" type="Dot" gid="30" x="144" y="240" width="8" height="8"/>
+  <object id="609" type="Dot" gid="30" x="144" y="248" width="8" height="8"/>
+  <object id="610" type="Dot" gid="30" x="144" y="256" width="8" height="8"/>
+  <object id="613" type="Dot" gid="30" x="144" y="280" width="8" height="8"/>
+  <object id="617" type="Dot" gid="30" x="152" y="56" width="8" height="8"/>
+  <object id="621" type="Dot" gid="30" x="152" y="88" width="8" height="8"/>
+  <object id="636" type="Dot" gid="30" x="152" y="208" width="8" height="8"/>
+  <object id="639" type="Dot" gid="30" x="152" y="232" width="8" height="8"/>
+  <object id="645" type="Dot" gid="30" x="152" y="280" width="8" height="8"/>
+  <object id="649" type="Dot" gid="30" x="160" y="56" width="8" height="8"/>
+  <object id="653" type="Dot" gid="30" x="160" y="88" width="8" height="8"/>
+  <object id="668" type="Dot" gid="30" x="160" y="208" width="8" height="8"/>
+  <object id="671" type="Dot" gid="30" x="160" y="232" width="8" height="8"/>
+  <object id="677" type="Dot" gid="30" x="160" y="280" width="8" height="8"/>
+  <object id="681" type="Dot" gid="30" x="168" y="56" width="8" height="8"/>
+  <object id="682" type="Dot" gid="30" x="168" y="64" width="8" height="8"/>
+  <object id="683" type="Dot" gid="30" x="168" y="72" width="8" height="8"/>
+  <object id="684" type="Dot" gid="30" x="168" y="80" width="8" height="8"/>
+  <object id="685" type="Dot" gid="30" x="168" y="88" width="8" height="8"/>
+  <object id="686" type="Dot" gid="30" x="168" y="96" width="8" height="8"/>
+  <object id="687" type="Dot" gid="30" x="168" y="104" width="8" height="8"/>
+  <object id="688" type="Dot" gid="30" x="168" y="112" width="8" height="8"/>
+  <object id="689" type="Dot" gid="30" x="168" y="120" width="8" height="8"/>
+  <object id="690" type="Dot" gid="30" x="168" y="128" width="8" height="8"/>
+  <object id="691" type="Dot" gid="30" x="168" y="136" width="8" height="8"/>
+  <object id="692" type="Dot" gid="30" x="168" y="144" width="8" height="8"/>
+  <object id="693" type="Dot" gid="30" x="168" y="152" width="8" height="8"/>
+  <object id="694" type="Dot" gid="30" x="168" y="160" width="8" height="8"/>
+  <object id="695" type="Dot" gid="30" x="168" y="168" width="8" height="8"/>
+  <object id="696" type="Dot" gid="30" x="168" y="176" width="8" height="8"/>
+  <object id="697" type="Dot" gid="30" x="168" y="184" width="8" height="8"/>
+  <object id="698" type="Dot" gid="30" x="168" y="192" width="8" height="8"/>
+  <object id="699" type="Dot" gid="30" x="168" y="200" width="8" height="8"/>
+  <object id="700" type="Dot" gid="30" x="168" y="208" width="8" height="8"/>
+  <object id="701" type="Dot" gid="30" x="168" y="216" width="8" height="8"/>
+  <object id="702" type="Dot" gid="30" x="168" y="224" width="8" height="8"/>
+  <object id="703" type="Dot" gid="30" x="168" y="232" width="8" height="8"/>
+  <object id="704" type="Dot" gid="30" x="168" y="240" width="8" height="8"/>
+  <object id="705" type="Dot" gid="30" x="168" y="248" width="8" height="8"/>
+  <object id="706" type="Dot" gid="30" x="168" y="256" width="8" height="8"/>
+  <object id="709" type="Dot" gid="30" x="168" y="280" width="8" height="8"/>
+  <object id="713" type="Dot" gid="30" x="176" y="56" width="8" height="8"/>
+  <object id="717" type="Dot" gid="30" x="176" y="88" width="8" height="8"/>
+  <object id="720" type="Dot" gid="30" x="176" y="112" width="8" height="8"/>
+  <object id="732" type="Dot" gid="30" x="176" y="208" width="8" height="8"/>
+  <object id="738" type="Dot" gid="30" x="176" y="256" width="8" height="8"/>
+  <object id="741" type="Dot" gid="30" x="176" y="280" width="8" height="8"/>
+  <object id="745" type="Dot" gid="30" x="184" y="56" width="8" height="8"/>
+  <object id="749" type="Dot" gid="30" x="184" y="88" width="8" height="8"/>
+  <object id="752" type="Dot" gid="30" x="184" y="112" width="8" height="8"/>
+  <object id="764" type="Dot" gid="30" x="184" y="208" width="8" height="8"/>
+  <object id="770" type="Dot" gid="30" x="184" y="256" width="8" height="8"/>
+  <object id="773" type="Dot" gid="30" x="184" y="280" width="8" height="8"/>
+  <object id="777" type="Dot" gid="30" x="192" y="56" width="8" height="8"/>
+  <object id="781" type="Dot" gid="30" x="192" y="88" width="8" height="8"/>
+  <object id="784" type="Dot" gid="30" x="192" y="112" width="8" height="8"/>
+  <object id="796" type="Dot" gid="30" x="192" y="208" width="8" height="8"/>
+  <object id="799" type="Dot" gid="30" x="192" y="232" width="8" height="8"/>
+  <object id="800" type="Dot" gid="30" x="192" y="240" width="8" height="8"/>
+  <object id="801" type="Dot" gid="30" x="192" y="248" width="8" height="8"/>
+  <object id="802" type="Dot" gid="30" x="192" y="256" width="8" height="8"/>
+  <object id="805" type="Dot" gid="30" x="192" y="280" width="8" height="8"/>
+  <object id="809" type="Dot" gid="30" x="200" y="56" width="8" height="8"/>
+  <object id="813" type="Dot" gid="30" x="200" y="88" width="8" height="8"/>
+  <object id="816" type="Dot" gid="30" x="200" y="112" width="8" height="8"/>
+  <object id="828" type="Dot" gid="30" x="200" y="208" width="8" height="8"/>
+  <object id="831" type="Dot" gid="30" x="200" y="232" width="8" height="8"/>
+  <object id="834" type="Dot" gid="30" x="200" y="256" width="8" height="8"/>
+  <object id="837" type="Dot" gid="30" x="200" y="280" width="8" height="8"/>
+  <object id="841" type="Dot" gid="30" x="208" y="56" width="8" height="8"/>
+  <object id="842" type="Dot" gid="30" x="208" y="64" width="8" height="8"/>
+  <object id="843" type="Dot" gid="30" x="208" y="72" width="8" height="8"/>
+  <object id="844" type="Dot" gid="30" x="208" y="80" width="8" height="8"/>
+  <object id="845" type="Dot" gid="30" x="208" y="88" width="8" height="8"/>
+  <object id="846" type="Dot" gid="30" x="208" y="96" width="8" height="8"/>
+  <object id="847" type="Dot" gid="30" x="208" y="104" width="8" height="8"/>
+  <object id="848" type="Dot" gid="30" x="208" y="112" width="8" height="8"/>
+  <object id="860" type="Dot" gid="30" x="208" y="208" width="8" height="8"/>
+  <object id="861" type="Dot" gid="30" x="208" y="216" width="8" height="8"/>
+  <object id="862" type="Dot" gid="30" x="208" y="224" width="8" height="8"/>
+  <object id="863" type="Dot" gid="30" x="208" y="232" width="8" height="8"/>
+  <object id="866" type="Dot" gid="30" x="208" y="256" width="8" height="8"/>
+  <object id="867" type="Dot" gid="30" x="208" y="264" width="8" height="8"/>
+  <object id="868" type="Dot" gid="30" x="208" y="272" width="8" height="8"/>
+  <object id="869" type="Dot" gid="30" x="208" y="280" width="8" height="8"/>
  </objectgroup>
- <objectgroup id="2" name="GameObject">
+ <objectgroup id="2" name="StartPosition" locked="1">
   <properties>
    <property name="excalibur" type="bool" value="true"/>
   </properties>
-  <object id="1" name="SPPlayer" type="Player" x="112" y="198">
+  <object id="1" name="SPPlayer" type="PlayerActor" x="112" y="228">
    <point/>
   </object>
-  <object id="9" name="SPBlinky" type="BlinkyActor" x="112" y="96">
+  <object id="9" name="SPBlinky" type="BlinkyActor" x="112" y="134">
    <point/>
   </object>
-  <object id="10" name="SPInky" type="InkyActor" x="96" y="120">
+  <object id="10" name="SPInky" type="InkyActor" x="96" y="160">
    <point/>
   </object>
-  <object id="11" name="SPPinky" type="PinkyActor" x="112" y="120">
+  <object id="11" name="SPPinky" type="PinkyActor" x="112" y="160">
    <point/>
   </object>
-  <object id="12" name="SPClyde" type="ClydeActor" x="128" y="120">
+  <object id="12" name="SPClyde" type="ClydeActor" x="128" y="160">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="7" name="ScatteredPosition" locked="1">
+  <object id="13" name="SPBlinky" x="32" y="70">
    <point/>
   </object>
  </objectgroup>

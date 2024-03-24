@@ -5,17 +5,19 @@
   "scripts": {
     "clean": "rimraf .parcel-cache dist",
     "start:dev": "npm run clean && parcel serve ./index.html",
-    "build": "parcel build ./index.html --dist-dir ./dist --public-url ./",
+    "build": "npm run clean && parcel build ./index.html --dist-dir ./dist --public-url ./",
     "lint": "eslint ./src",
     "lint:fix": "eslint --fix ./src"
   },
   "author": "ymoreiratiti@gmail.com",
   "license": "MIT",
   "dependencies": {
-    "@excaliburjs/plugin-tiled": "0.29.0",
-    "excalibur": "0.29.1"
+    "@excaliburjs/plugin-tiled": "^0.29.0",
+    "excalibur": "^0.29.1",
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
+    "@types/lodash": "^4.17.0",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "buffer": "^6.0.3",
     "eslint": "^8.57.0",

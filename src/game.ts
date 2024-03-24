@@ -6,12 +6,13 @@ import { Level1Scene } from "./scenes/level-001";
 export class Game extends Engine {
   constructor() {
     super({
-      width: 35 * Config.GridSize,
-      height: 31 * Config.GridSize,
+      width: Config.Grid.width * Config.Grid.tileSize,
+      height: Config.Grid.height * Config.Grid.tileSize,
       backgroundColor: Color.Black,
       displayMode: DisplayMode.FitScreen,
       pixelArt: true,
       pixelRatio: 10,
+      maxFps: 60,
       suppressPlayButton: true,
     });
   }

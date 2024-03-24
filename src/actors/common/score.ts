@@ -13,7 +13,7 @@ export class Score extends Actor {
   constructor(public readonly properties: Partial<FactoryProps> = {}) {
     super({
       name: Score.name,
-      pos: new Vector(250, 10),
+      pos: new Vector(100, 10),
     });
 
     this.drawScore();
