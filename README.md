@@ -9,12 +9,12 @@ https://ymoreiratiti.github.io/Pac-Man/
 
 ## Link utils:
 
-- SpriteSheets: https://www.spriters-resource.com/arcade/pacman/
-- https://www.youtube.com/watch?v=S4RHbnBkyh0
-- https://www.youtube.com/watch?v=ataGotQ7ir8
-- https://www.youtube.com/watch?v=vYoB41ocjaA
-- https://www.youtube.com/watch?v=-CbyAk3Sn9I
-- https://pacman.fandom.com/wiki/Maze_Ghost_AI_Behaviors
-- https://gameinternals.com/understanding-pac-man-ghost-behavior
-- http://donhodges.com/pacman_pinky_explanation.htm
+- [Explicando a IA dos Fantasmas de Pac-Man](https://youtu.be/ataGotQ7ir8?si=ElshhAA611sOiB6V)
+- [Maze Ghost AI Behaviors](https://pacman.fandom.com/wiki/Maze_Ghost_AI_Behaviors)
+- [Pac-Man Original (Arcade 1980)](https://youtu.be/-CbyAk3Sn9I?si=gtVvqvSufLAQzQO1)
+- [SpriteSheets](https://www.spriters-resource.com/arcade/pacman/)
+- [State Pattern for AI Behaviors - Pac-Man Ghost AI in Phaser 3 Part 2](https://youtu.be/vYoB41ocjaA?si=VG53SK78X99PBoyE)
 - [The Pac-Man Dossier - Jamey Pittman](https://pacman.holenet.info/)
+- [Understanding Pac-Man Ghost Behavior](https://gameinternals.com/understanding-pac-man-ghost-behavior)
+- [What Pac-Man Brought to Game Design | Design Icons](https://youtu.be/S4RHbnBkyh0?si=ji691_Fx8jraS5JX)
+- [Why do Pinky and Inky have different behaviors when Pac-Man is facing up?](http://donhodges.com/pacman_pinky_explanation.htm)
