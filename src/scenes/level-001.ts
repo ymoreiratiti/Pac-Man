@@ -1,5 +1,5 @@
 import { EventEmitter, Scene } from "excalibur";
-import { Score } from "../actors/score";
+import { Score } from "../actors/common/score";
 import { map001Resource } from "../resources/map-001";
 
 export class Level1Scene extends Scene {

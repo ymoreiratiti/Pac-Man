@@ -1,5 +1,5 @@
 import { Animation, AnimationStrategy, SpriteSheet } from "excalibur";
-import { ActorSpriteSheet } from "../../spritesheets/actor.spritesheet";
+import { ActorSpriteSheet } from "../../../spritesheets/actor.spritesheet";
 
 export abstract class GhostAnimation {
   protected abstract readonly spriteSheetCoordinatesY: number;

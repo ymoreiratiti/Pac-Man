@@ -1,8 +1,9 @@
 import { FactoryProps } from "@excaliburjs/plugin-tiled";
 import { Actor, Circle, Collider, CollisionType, Color, EventEmitter, ImageFiltering } from "excalibur";
 import { ActorEvents } from "excalibur/build/dist/Actor";
-import { Config } from "../config";
-import { Player } from "./player";
+import { Config } from "../../config";
+import { SpecialDotCollisionGroup } from "../collision-group";
+import { PlayerActor } from "../player/player.actor";
 
 interface DotEvents {
   eated: number;
@@ -16,25 +17,26 @@ export class SpecialDot extends Actor {
   constructor(public readonly properties: Partial<FactoryProps> = {}) {
     super({
       collisionType: CollisionType.Passive,
+      collisionGroup: SpecialDotCollisionGroup,
       color: Color.Yellow,
-      height: Config.GridSize,
-      width: Config.GridSize,
-      x: properties.worldPos!.x + Config.GridSize / 2,
-      y: properties.worldPos!.y - Config.GridSize / 2,
+      height: Config.Grid.tileSize,
+      width: Config.Grid.tileSize,
+      x: properties.worldPos!.x + Config.Grid.tileSize / 2,
+      y: properties.worldPos!.y - Config.Grid.tileSize / 2,
       name: SpecialDot.name,
     });
 
     this.graphics.use(
       new Circle({
         filtering: ImageFiltering.Pixel,
-        radius: Config.GridSize / 3,
+        radius: Config.Grid.tileSize / 3,
         color: Color.fromHex("FFB7AE"),
       }),
     );
   }
 
   onCollisionStart(_self: Collider, other: Collider): void {
-    if (other.owner.name !== Player.name) return;
+    if (other.owner.name !== PlayerActor.name) return;
 
     this.events.emit("eated", SCORE_POINT);
     this.kill();

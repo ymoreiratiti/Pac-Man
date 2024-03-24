@@ -37,11 +37,11 @@
             }
         },
         "maps/map-001.tmx": {
-            "scale": 4,
-            "selectedLayer": 3,
+            "scale": 3,
+            "selectedLayer": 4,
             "viewCenter": {
-                "x": 135.5,
-                "y": 243.5
+                "x": 111.83333333333331,
+                "y": 227.49999999999997
             }
         },
         "maps/tileset/maze-wall.tsx": {
@@ -101,8 +101,8 @@
     "project": "main.tiled-project",
     "property.type": "bool",
     "recentFiles": [
-        "tilesets/spritesheet/actors.tsx",
         "maps/map-001.tmx",
+        "tilesets/spritesheet/actors.tsx",
         "tilesets/spritesheet/maze.tsx",
         "tilesets/wall/wall.tsx",
         "tilesets/spritesheet/spritesheet-16.tsx",
