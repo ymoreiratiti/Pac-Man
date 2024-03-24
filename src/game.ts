@@ -13,7 +13,7 @@ export class Game extends Engine {
       pixelArt: true,
       pixelRatio: 10,
       maxFps: 60,
-      suppressPlayButton: false,
+      suppressPlayButton: true,
     });
   }
 
