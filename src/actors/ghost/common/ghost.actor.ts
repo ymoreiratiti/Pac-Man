@@ -1,14 +1,12 @@
 import { FactoryProps } from "@excaliburjs/plugin-tiled";
-import { ActorArgs, CollisionType, Scene, Side, Tile, Vector } from "excalibur";
+import { ActorArgs, CollisionType, Side, Tile, Vector } from "excalibur";
 import { Config } from "../../../config";
-import { ghostCanCollideWith } from "../../collision-group";
 import { PersonActor } from "../../common/person";
 import { PlayerActor } from "../../player/player.actor";
 import { GhostAnimation } from "./ghost.animation";
 import { GhostState } from "./type";
 
 export abstract class GhostActor extends PersonActor {
-  public scene!: Scene;
   protected currentState: GhostState = GhostState.WAITING;
   protected queueDirection: Side = Side.Bottom;
   protected speed = (Config.PlayerSpeed / 4) * 3; // 25% slower than player
@@ -23,7 +21,6 @@ export abstract class GhostActor extends PersonActor {
   constructor(properties: Partial<FactoryProps> = {}, actorArguments: ActorArgs = {}) {
     super({
       collisionType: CollisionType.Active,
-      collisionGroup: ghostCanCollideWith,
       height: Config.Grid.tileSize,
       width: Config.Grid.tileSize,
       pos: properties.worldPos,

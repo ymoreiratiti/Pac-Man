@@ -1,10 +1,12 @@
 import { Actor, Engine, Side, Tile, TileMap, Vector, vec } from "excalibur";
 import { Config } from "../../config";
+import { CommonScene } from "../../scenes/common.scene";
 
 /**
  * Handles the common logic for movement and collision of a person.
  */
 export abstract class PersonActor extends Actor {
+  public scene!: CommonScene;
   protected abstract speed: number;
   protected abstract setupAnimation(): void;
   protected abstract queueDirection: Side;

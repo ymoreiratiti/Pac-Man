@@ -13,6 +13,13 @@ export class BlinkyActor extends GhostActor {
     super(properties, { color: Color.Red, name: BlinkyActor.name });
   }
 
+  onInitialize(): void {
+    super.onInitialize();
+    this.scene.events.on("scatterchaseinterval", (ghostState: GhostState) => {
+      this.currentState = ghostState;
+    });
+  }
+
   /**
    * UPDATE
    */

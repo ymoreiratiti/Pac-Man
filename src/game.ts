@@ -1,7 +1,7 @@
 import { Color, DisplayMode, Engine } from "excalibur";
 import { Config } from "./config";
 import { loader } from "./resources/loader";
-import { Level1Scene } from "./scenes/level-001";
+import { Level1Scene } from "./scenes/level-001.scene";
 
 export class Game extends Engine {
   constructor() {

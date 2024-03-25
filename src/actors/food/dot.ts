@@ -2,7 +2,6 @@ import { FactoryProps } from "@excaliburjs/plugin-tiled";
 import { Actor, Collider, CollisionType, Color, EventEmitter, ImageFiltering, Rectangle } from "excalibur";
 import { ActorEvents } from "excalibur/build/dist/Actor";
 import { Config } from "../../config";
-import { DotCollisionGroup } from "../collision-group";
 import { PlayerActor } from "../player/player.actor";
 
 interface DotEvents {
@@ -17,7 +16,6 @@ export class Dot extends Actor {
   constructor(public readonly properties: Partial<FactoryProps> = {}) {
     super({
       collisionType: CollisionType.Passive,
-      collisionGroup: DotCollisionGroup,
       color: Color.Yellow,
       height: Config.Grid.tileSize,
       width: Config.Grid.tileSize,

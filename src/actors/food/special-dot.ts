@@ -2,7 +2,6 @@ import { FactoryProps } from "@excaliburjs/plugin-tiled";
 import { Actor, Circle, Collider, CollisionType, Color, EventEmitter, ImageFiltering } from "excalibur";
 import { ActorEvents } from "excalibur/build/dist/Actor";
 import { Config } from "../../config";
-import { SpecialDotCollisionGroup } from "../collision-group";
 import { PlayerActor } from "../player/player.actor";
 
 interface DotEvents {
@@ -17,7 +16,6 @@ export class SpecialDot extends Actor {
   constructor(public readonly properties: Partial<FactoryProps> = {}) {
     super({
       collisionType: CollisionType.Passive,
-      collisionGroup: SpecialDotCollisionGroup,
       color: Color.Yellow,
       height: Config.Grid.tileSize,
       width: Config.Grid.tileSize,
@@ -25,7 +23,10 @@ export class SpecialDot extends Actor {
       y: properties.worldPos!.y - Config.Grid.tileSize / 2,
       name: SpecialDot.name,
     });
+  }
 
+  onInitialize(): void {
+    this.actions.blink(200, 200, 5000);
     this.graphics.use(
       new Circle({
         filtering: ImageFiltering.Pixel,
